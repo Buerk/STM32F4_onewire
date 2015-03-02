@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<EmBlocks_project_file>
+	<EmBlocksVersion release="2.30" revision="1" />
+	<FileVersion major="1" minor="0" />
+	<Project>
+		<Option title="STM32RBue" />
+		<Option pch_mode="2" />
+		<Option compiler="armgcc_eb" />
+		<Build>
+			<Target title="STM32RBue">
+				<Option output=".\STM32RBue.elf" />
+				<Option type="0" />
+				<Option create_hex="1" />
+				<Option compiler="armgcc" />
+				<Option projectCompilerOptionsRelation="1" />
+				<Option projectAssemblerOptionsRelation="1" />
+				<Option projectLinkerOptionsRelation="1" />
+				<Option projectIncludeDirsRelation="1" />
+				<Option projectLibDirsRelation="1" />
+				<Device>
+					<Add option="$device=cortex-m4" />
+					<Add option="$lscript=.\STM32RBueRam.ld" />
+				</Device>
+				<Compiler>
+					<Add option="-mthumb" />
+					<Add option="-Wall" />
+					<Add option="-ffunction-sections" />
+					<Add option="-O0" />
+					<Add option="-g" />
+					<Add option="-DSTM32F40_41xxx" />
+					<Add option="-DSTM32F4XX" />
+					<Add option="-DUSE_STDPERIPH_DRIVER" />
+					<Add option="-DVECT_TAB_SRAM" />
+					<Add directory="." />
+					<Add directory="CMSIS" />
+					<Add directory="DEVICE" />
+					<Add directory="DRIVERS\INC" />
+				</Compiler>
+				<Assembler>
+					<Add option="-Wa,-mthumb" />
+				</Assembler>
+				<Linker>
+					<Add option="-nostartfiles" />
+					<Add option="-Wl,--gc-sections" />
+				</Linker>
+			</Target>
+			<Target title="STM32RBueRelease">
+				<Option output=".\STM32RBue.elf" />
+				<Option type="0" />
+				<Option create_hex="1" />
+				<Option compiler="armgcc" />
+				<Option projectCompilerOptionsRelation="1" />
+				<Option projectAssemblerOptionsRelation="1" />
+				<Option projectLinkerOptionsRelation="1" />
+				<Option projectIncludeDirsRelation="1" />
+				<Option projectLibDirsRelation="1" />
+				<Device>
+					<Add option="$device=cortex-m4" />
+					<Add option="$lscript=.\STM32RBue.ld" />
+				</Device>
+				<Compiler>
+					<Add option="-mthumb" />
+					<Add option="-Wall" />
+					<Add option="-ffunction-sections" />
+					<Add option="-O0" />
+					<Add option="-g" />
+					<Add option="-DSTM32F40_41xxx" />
+					<Add option="-DSTM32F4XX" />
+					<Add option="-DUSE_STDPERIPH_DRIVER" />
+					<Add directory="." />
+					<Add directory="CMSIS" />
+					<Add directory="DEVICE" />
+					<Add directory="DRIVERS\INC" />
+				</Compiler>
+				<Assembler>
+					<Add option="-Wa,-mthumb" />
+				</Assembler>
+				<Linker>
+					<Add option="-nostartfiles" />
+					<Add option="-Wl,--gc-sections" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add directory="cmsis" />
+			<Add directory="cmsis_boot" />
+		</Compiler>
+		<Unit filename="Application\main.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Application\stm32f4xx_conf.h" />
+		<Unit filename="Drivers\inc\misc.h" />
+		<Unit filename="Drivers\inc\stm32f4xx_adc.h" />
+		<Unit filename="Drivers\inc\stm32f4xx_can.h" />
+		<Unit filename="Drivers\inc\stm32f4xx_crc.h" />
+		<Unit filename="Drivers\inc\stm32f4xx_cryp.h" />
+		<Unit filename="Drivers\inc\stm32f4xx_dac.h" />
+		<Unit filename="Drivers\inc\stm32f4xx_dbgmcu.h" />
+		<Unit filename="Drivers\inc\stm32f4xx_dcmi.h" />
+		<Unit filename="Drivers\inc\stm32f4xx_dma.h" />
+		<Unit filename="Drivers\inc\stm32f4xx_dma2d.h" />
+		<Unit filename="Drivers\inc\stm32f4xx_exti.h" />
+		<Unit filename="Drivers\inc\stm32f4xx_flash.h" />
+		<Unit filename="Drivers\inc\stm32f4xx_flash_ramfunc.h" />
+		<Unit filename="Drivers\inc\stm32f4xx_fmc.h" />
+		<Unit filename="Drivers\inc\stm32f4xx_fsmc.h" />
+		<Unit filename="Drivers\inc\stm32f4xx_gpio.h" />
+		<Unit filename="Drivers\inc\stm32f4xx_hash.h" />
+		<Unit filename="Drivers\inc\stm32f4xx_i2c.h" />
+		<Unit filename="Drivers\inc\stm32f4xx_iwdg.h" />
+		<Unit filename="Drivers\inc\stm32f4xx_ltdc.h" />
+		<Unit filename="Drivers\inc\stm32f4xx_pwr.h" />
+		<Unit filename="Drivers\inc\stm32f4xx_rcc.h" />
+		<Unit filename="Drivers\inc\stm32f4xx_rng.h" />
+		<Unit filename="Drivers\inc\stm32f4xx_rtc.h" />
+		<Unit filename="Drivers\inc\stm32f4xx_sai.h" />
+		<Unit filename="Drivers\inc\stm32f4xx_sdio.h" />
+		<Unit filename="Drivers\inc\stm32f4xx_spi.h" />
+		<Unit filename="Drivers\inc\stm32f4xx_syscfg.h" />
+		<Unit filename="Drivers\inc\stm32f4xx_tim.h" />
+		<Unit filename="Drivers\inc\stm32f4xx_usart.h" />
+		<Unit filename="Drivers\inc\stm32f4xx_wwdg.h" />
+		<Unit filename="Drivers\src\misc.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Drivers\src\stm32f4xx_adc.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Drivers\src\stm32f4xx_can.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Drivers\src\stm32f4xx_crc.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Drivers\src\stm32f4xx_dac.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Drivers\src\stm32f4xx_dbgmcu.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Drivers\src\stm32f4xx_dcmi.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Drivers\src\stm32f4xx_dma.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Drivers\src\stm32f4xx_dma2d.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Drivers\src\stm32f4xx_exti.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Drivers\src\stm32f4xx_flash.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Drivers\src\stm32f4xx_gpio.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Drivers\src\stm32f4xx_hash.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Drivers\src\stm32f4xx_hash_md5.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Drivers\src\stm32f4xx_hash_sha1.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Drivers\src\stm32f4xx_i2c.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Drivers\src\stm32f4xx_iwdg.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Drivers\src\stm32f4xx_ltdc.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Drivers\src\stm32f4xx_pwr.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Drivers\src\stm32f4xx_rcc.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Drivers\src\stm32f4xx_rng.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Drivers\src\stm32f4xx_rtc.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Drivers\src\stm32f4xx_sai.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Drivers\src\stm32f4xx_sdio.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Drivers\src\stm32f4xx_spi.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Drivers\src\stm32f4xx_syscfg.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Drivers\src\stm32f4xx_tim.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Drivers\src\stm32f4xx_usart.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Drivers\src\stm32f4xx_wwdg.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Startup\startup_stm32f4xx.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Startup\system_stm32f4xx.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="cmsis\Include\arm_common_tables.h" />
+		<Unit filename="cmsis\Include\arm_const_structs.h" />
+		<Unit filename="cmsis\Include\arm_math.h" />
+		<Unit filename="cmsis\Include\core_cm0.h" />
+		<Unit filename="cmsis\Include\core_cm0plus.h" />
+		<Unit filename="cmsis\Include\core_cm3.h" />
+		<Unit filename="cmsis\Include\core_cm4.h" />
+		<Unit filename="cmsis\Include\core_cm4_simd.h" />
+		<Unit filename="cmsis\Include\core_cmFunc.h" />
+		<Unit filename="cmsis\Include\core_cmInstr.h" />
+		<Unit filename="cmsis\Include\core_sc000.h" />
+		<Unit filename="cmsis\Include\core_sc300.h" />
+		<Unit filename="device\stm32f4xx.h" />
+		<Unit filename="device\system_stm32f4xx.h" />
+		<Unit filename="driver\DS18B20.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="driver\DS18B20.h" />
+		<Unit filename="driver\OneWire.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="driver\OneWire.h" />
+		<Extensions>
+			<code_completion />
+			<debugger>
+				<target_debugging_settings target="STM32RBue" active_interface="ST-link">
+					<debug_interface interface_id="ST-link" ip_address="localhost" ip_port="4242" path="${EMBLOCKS}\share\contrib" executable="STLinkGDB.exe" description="" dont_start_server="false" backoff_time="1000" options="0" reg_filter="0" active_family="STMicroelectronics">
+						<family_options family_id="STMicroelectronics">
+							<option opt_id="ID_JTAG_SWD" opt_value="swd" />
+							<option opt_id="ID_VECTOR_START" opt_value="0x20000000" />
+							<option opt_id="ID_RESET_TYPE" opt_value="System" />
+							<option opt_id="ID_LOAD_PROGRAM" opt_value="1" />
+							<option opt_id="ID_SEMIHOST_CHECK" opt_value="0" />
+							<option opt_id="ID_RAM_EXEC" opt_value="1" />
+							<option opt_id="ID_VEC_TABLE" opt_value="1" />
+							<option opt_id="ID_VERBOSE_LEVEL" opt_value="3" />
+						</family_options>
+					</debug_interface>
+				</target_debugging_settings>
+			</debugger>
+			<envvars />
+		</Extensions>
+	</Project>
+</EmBlocks_project_file>
